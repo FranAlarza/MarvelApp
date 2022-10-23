@@ -19,12 +19,23 @@ class FavoritesSeriesViewModel: ObservableObject {
     
     func fetchFavorites() {
         let series = userDefaultsSeries.load()
-        favorites = series
+        let uniqueSeries = removeDuplicateElements(series: series)
+        favorites = uniqueSeries
     }
     
     func deleteRow(from id: Int) {
         favorites.removeAll(where: {$0.id == id})
         userDefaultsSeries.save(series: favorites)
+    }
+    
+    private func removeDuplicateElements(series: [Series]) -> [Series] {
+        var uniqueSeries = [Series]()
+        for serie in series {
+            if !uniqueSeries.contains(where: {$0.id == serie.id }) {
+                uniqueSeries.append(serie)
+            }
+        }
+        return uniqueSeries
     }
     
     

@@ -19,7 +19,7 @@ struct FavoritesView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
-                        .foregroundColor(.red)
+                        .background(Color.red)
                     }
             }
         }
