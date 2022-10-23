@@ -23,6 +23,7 @@ struct SeriesView: View {
                 }
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
+                .shadow(radius: 5)
             }
             .navigationTitle("Series")
         }

@@ -20,6 +20,7 @@ struct HeroesView: View {
                         }
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
+                        .shadow(radius: 5)
                     }
                 }
                 .navigationTitle("Heroes")
