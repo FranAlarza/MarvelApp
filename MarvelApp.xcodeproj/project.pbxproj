@@ -50,8 +50,6 @@
 		9DC65B1D28FC9BD200F040B8 /* SerieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */; };
 		9DC65B1E28FC9BD200F040B8 /* SerieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */; };
 		9DC65B2128FC9BEB00F040B8 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D58D51128FACF13005457F4 /* HeroCardView.swift */; };
-		9DD3E36429C8C2C7006EEA60 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD3E36329C8C2C7006EEA60 /* RemoteDataSource.swift */; };
-		9DD3E36729C8C8DB006EEA60 /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD3E36629C8C8DB006EEA60 /* MarvelAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,8 +92,6 @@
 		9DC65B1828FC98F500F040B8 /* SeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		9DC65B1A28FC9B7F00F040B8 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
 		9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCardView.swift; sourceTree = "<group>"; };
-		9DD3E36329C8C2C7006EEA60 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
-		9DD3E36629C8C8DB006EEA60 /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +133,6 @@
 		9D17BEE828FA168A00BF9E42 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
-				9DD3E36229C8C293006EEA60 /* Data */,
 				9DD3E36129C8C197006EEA60 /* Domain */,
 				9D17BF2328FA340300BF9E42 /* Info.plist */,
 				9D17BF1428FA16C700BF9E42 /* Managers */,
@@ -219,15 +214,6 @@
 				9D3DE5452904B2CE002975B9 /* StatusModel.swift */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		9DD3E36229C8C293006EEA60 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				9DD3E36329C8C2C7006EEA60 /* RemoteDataSource.swift */,
-				9DD3E36629C8C8DB006EEA60 /* MarvelAPI.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		9DD3E36829C8CA5A006EEA60 /* HeroListView */ = {
@@ -388,8 +374,6 @@
 				9D17BEEC28FA168A00BF9E42 /* HeroesView.swift in Sources */,
 				9D17BEEA28FA168A00BF9E42 /* MarvelAppApp.swift in Sources */,
 				9D103CD428FDF53C000B368A /* SerieDetailView.swift in Sources */,
-				9DD3E36729C8C8DB006EEA60 /* MarvelAPI.swift in Sources */,
-				9DD3E36429C8C2C7006EEA60 /* RemoteDataSource.swift in Sources */,
 				9D86DE4E29007FBC00D40F0C /* FavoritesSeriesViewModel.swift in Sources */,
 				9DC65B1928FC98F500F040B8 /* SeriesViewModel.swift in Sources */,
 				9D86DE502900844D00D40F0C /* FavoritesView.swift in Sources */,
