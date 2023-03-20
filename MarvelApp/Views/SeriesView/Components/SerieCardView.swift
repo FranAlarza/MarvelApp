@@ -76,6 +76,9 @@ struct SerieCardView: View {
                     Spacer()
                 } // Fin HStack
                 .padding(10)
+                .onAppear {
+                    isFavorite = favoritesSeries.favorites.contains { $0.id == serie.id }
+                }
             } // Fin VStack
         }
         .cornerRadius(20)

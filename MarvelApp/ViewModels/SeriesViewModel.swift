@@ -32,7 +32,7 @@ class SeriesViewModel: ObservableObject {
                     print("Error al descargar las series: \(error)")
                 }
             } receiveValue: { data in
-                self.series = data.data.results
+                self.series = data.data.results.filter { !$0.thumbnail.path.contains("image_not_available") }
             }
             .store(in: &cancellables)
     }
