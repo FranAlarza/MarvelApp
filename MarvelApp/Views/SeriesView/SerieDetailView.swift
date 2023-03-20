@@ -17,12 +17,10 @@ struct SerieDetailView: View {
                         image
                             .resizable()
                             .opacity(1)
-                            .edgesIgnoringSafeArea(.all)
                             .frame(width: geometry.size.width)
                         LinearGradient(gradient: Gradient(colors: [.white.opacity(0.6), .black.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
                             .frame(width: geometry.size.width)
                     }
-                    .ignoresSafeArea()
                 }
                 
                 

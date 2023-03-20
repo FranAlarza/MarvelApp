@@ -40,7 +40,6 @@ final class HeroesViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] data in
                 self?.heroes = data.data.results.filter { !$0.thumbnail.path.contains("image_not_available") }
-                print(self?.heroes)
             }
             .store(in: &cancellables)
     }
