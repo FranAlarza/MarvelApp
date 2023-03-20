@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SerieCardView: View {
+    @EnvironmentObject var viewModel: SeriesViewModel
     var serie: Series
-    @StateObject var favoritesSeries = FavoritesSeriesViewModel()
     @State var isFavorite = false
     
     var body: some View {
@@ -46,12 +46,12 @@ struct SerieCardView: View {
                     Button {
                         isFavorite.toggle()
                         if isFavorite {
-                            favoritesSeries.saveFavorite(serie: serie)
+                            viewModel.saveFavorite(serie: serie)
                         } else {
-                            favoritesSeries.deleteRow(from: serie.id)
+                            viewModel.deleteFavorite(from: serie)
                         }
                     } label: {
-                        if isFavorite {
+                        if viewModel.favorites.contains(serie) {
                             Image(systemName: "heart")
                                 .resizable()
                                 .frame(width: 24, height: 24)
@@ -76,9 +76,6 @@ struct SerieCardView: View {
                     Spacer()
                 } // Fin HStack
                 .padding(10)
-                .onAppear {
-                    isFavorite = favoritesSeries.favorites.contains { $0.id == serie.id }
-                }
             } // Fin VStack
         }
         .cornerRadius(20)

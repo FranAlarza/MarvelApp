@@ -19,6 +19,7 @@ struct SeriesView: View {
                         SerieDetailView(serie: serie)
                     } label: {
                         SerieCardView(serie: serie)
+                            .environmentObject(viewModel)
                     }
                 }
                 .listRowSeparator(.hidden)
@@ -29,6 +30,7 @@ struct SeriesView: View {
         }
         .onAppear {
             viewModel.getSeries(id: id)
+            viewModel.fetchFavorites()
         }
     }
 }

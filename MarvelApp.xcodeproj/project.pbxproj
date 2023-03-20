@@ -20,7 +20,6 @@
 		9D17BF2028FA2BB900BF9E42 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17BF1F28FA2BB900BF9E42 /* HeroesViewModel.swift */; };
 		9D17BF2128FA2BB900BF9E42 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17BF1F28FA2BB900BF9E42 /* HeroesViewModel.swift */; };
 		9D3DE53E29049B49002975B9 /* SeriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE53D29049B49002975B9 /* SeriesViewModelTests.swift */; };
-		9D3DE54029049CAE002975B9 /* FavoriteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE53F29049CAE002975B9 /* FavoriteViewModelTests.swift */; };
 		9D3DE5462904B2CE002975B9 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE5452904B2CE002975B9 /* StatusModel.swift */; };
 		9D3DE5482904B54D002975B9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE5472904B54D002975B9 /* MainView.swift */; };
 		9D3DE54A2904B652002975B9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE5492904B652002975B9 /* LoadingView.swift */; };
@@ -32,7 +31,6 @@
 		9D6B982E2905EFF800418D8B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE5492904B652002975B9 /* LoadingView.swift */; };
 		9D6B98302905EFFB00418D8B /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE54B2904B676002975B9 /* ErrorView.swift */; };
 		9D6B98322905F09B00418D8B /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DE5452904B2CE002975B9 /* StatusModel.swift */; };
-		9D86DE4E29007FBC00D40F0C /* FavoritesSeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE4D29007FBC00D40F0C /* FavoritesSeriesViewModel.swift */; };
 		9D86DE502900844D00D40F0C /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE4F2900844D00D40F0C /* FavoritesView.swift */; };
 		9D86DE532900871F00D40F0C /* UserDafaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE522900871F00D40F0C /* UserDafaultHelper.swift */; };
 		9DAA90332904170100ABE0FC /* UserDafaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE522900871F00D40F0C /* UserDafaultHelper.swift */; };
@@ -42,7 +40,6 @@
 		9DAA903B29041E5300ABE0FC /* SerieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D103CD328FDF53C000B368A /* SerieDetailView.swift */; };
 		9DAA903D29041E5700ABE0FC /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE4F2900844D00D40F0C /* FavoritesView.swift */; };
 		9DAA903F29041E5E00ABE0FC /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1828FC98F500F040B8 /* SeriesViewModel.swift */; };
-		9DAA904129041E6200ABE0FC /* FavoritesSeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86DE4D29007FBC00D40F0C /* FavoritesSeriesViewModel.swift */; };
 		9DAA904329041E6600ABE0FC /* MarvelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17BEE928FA168A00BF9E42 /* MarvelAppApp.swift */; };
 		9DC65B1728FC7F0F00F040B8 /* SerieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1628FC7F0F00F040B8 /* SerieModel.swift */; };
 		9DC65B1928FC98F500F040B8 /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1828FC98F500F040B8 /* SeriesViewModel.swift */; };
@@ -50,6 +47,7 @@
 		9DC65B1D28FC9BD200F040B8 /* SerieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */; };
 		9DC65B1E28FC9BD200F040B8 /* SerieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */; };
 		9DC65B2128FC9BEB00F040B8 /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D58D51128FACF13005457F4 /* HeroCardView.swift */; };
+		9DD3E36F29C920F6006EEA60 /* SeriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD3E36E29C920F6006EEA60 /* SeriesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +75,6 @@
 		9D17BF1F28FA2BB900BF9E42 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
 		9D17BF2328FA340300BF9E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9D3DE53D29049B49002975B9 /* SeriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModelTests.swift; sourceTree = "<group>"; };
-		9D3DE53F29049CAE002975B9 /* FavoriteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModelTests.swift; sourceTree = "<group>"; };
 		9D3DE5452904B2CE002975B9 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		9D3DE5472904B54D002975B9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9D3DE5492904B652002975B9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -85,13 +82,13 @@
 		9D58D51128FACF13005457F4 /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
 		9D5E8285290436F70012DF61 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		9D5E8287290440A70012DF61 /* HeroesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModelTest.swift; sourceTree = "<group>"; };
-		9D86DE4D29007FBC00D40F0C /* FavoritesSeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSeriesViewModel.swift; sourceTree = "<group>"; };
 		9D86DE4F2900844D00D40F0C /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		9D86DE522900871F00D40F0C /* UserDafaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDafaultHelper.swift; sourceTree = "<group>"; };
 		9DC65B1628FC7F0F00F040B8 /* SerieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieModel.swift; sourceTree = "<group>"; };
 		9DC65B1828FC98F500F040B8 /* SeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		9DC65B1A28FC9B7F00F040B8 /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
 		9DC65B1C28FC9BD200F040B8 /* SerieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCardView.swift; sourceTree = "<group>"; };
+		9DD3E36E29C920F6006EEA60 /* SeriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +154,11 @@
 		9D17BEFA28FA168C00BF9E42 /* MarvelAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9DD3E36D29C920DC006EEA60 /* Providers */,
 				9D17BEFB28FA168C00BF9E42 /* UserDefaultHelperTests.swift */,
 				9D5E8285290436F70012DF61 /* NetworkManagerTests.swift */,
 				9D5E8287290440A70012DF61 /* HeroesViewModelTest.swift */,
 				9D3DE53D29049B49002975B9 /* SeriesViewModelTests.swift */,
-				9D3DE53F29049CAE002975B9 /* FavoriteViewModelTests.swift */,
 			);
 			path = MarvelAppTests;
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 			children = (
 				9D17BF1F28FA2BB900BF9E42 /* HeroesViewModel.swift */,
 				9DC65B1828FC98F500F040B8 /* SeriesViewModel.swift */,
-				9D86DE4D29007FBC00D40F0C /* FavoritesSeriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -257,6 +253,14 @@
 				9D86DE4F2900844D00D40F0C /* FavoritesView.swift */,
 			);
 			path = FavoritesView;
+			sourceTree = "<group>";
+		};
+		9DD3E36D29C920DC006EEA60 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9DD3E36E29C920F6006EEA60 /* SeriesProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +378,6 @@
 				9D17BEEC28FA168A00BF9E42 /* HeroesView.swift in Sources */,
 				9D17BEEA28FA168A00BF9E42 /* MarvelAppApp.swift in Sources */,
 				9D103CD428FDF53C000B368A /* SerieDetailView.swift in Sources */,
-				9D86DE4E29007FBC00D40F0C /* FavoritesSeriesViewModel.swift in Sources */,
 				9DC65B1928FC98F500F040B8 /* SeriesViewModel.swift in Sources */,
 				9D86DE502900844D00D40F0C /* FavoritesView.swift in Sources */,
 			);
@@ -396,15 +399,14 @@
 				9DC65B1E28FC9BD200F040B8 /* SerieCardView.swift in Sources */,
 				9DAA903529041E3C00ABE0FC /* SerieModel.swift in Sources */,
 				9D17BF2128FA2BB900BF9E42 /* HeroesViewModel.swift in Sources */,
-				9DAA904129041E6200ABE0FC /* FavoritesSeriesViewModel.swift in Sources */,
 				9DAA903D29041E5700ABE0FC /* FavoritesView.swift in Sources */,
 				9D3DE54E2904BD80002975B9 /* MainView.swift in Sources */,
 				9D5E8286290436F70012DF61 /* NetworkManagerTests.swift in Sources */,
+				9DD3E36F29C920F6006EEA60 /* SeriesProvider.swift in Sources */,
 				9D5E8288290440A70012DF61 /* HeroesViewModelTest.swift in Sources */,
 				9D17BF1C28FA1ED500BF9E42 /* HeroModel.swift in Sources */,
 				9DAA90332904170100ABE0FC /* UserDafaultHelper.swift in Sources */,
 				9DAA903929041E5000ABE0FC /* SeriesView.swift in Sources */,
-				9D3DE54029049CAE002975B9 /* FavoriteViewModelTests.swift in Sources */,
 				9D6B98322905F09B00418D8B /* StatusModel.swift in Sources */,
 				9D6B98302905EFFB00418D8B /* ErrorView.swift in Sources */,
 			);

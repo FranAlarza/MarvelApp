@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @StateObject var viewModel = FavoritesSeriesViewModel()
+    @EnvironmentObject var viewModel: SeriesViewModel
+    var data = UserDefaultsHelper()
+    @State var favorites: Set<Series> = []
     var body: some View {
         List {
-            ForEach(viewModel.favorites) { serie in
+            ForEach(Array(favorites)) { serie in
                 Text(serie.title)
                     .swipeActions {
                         Button {
-                            viewModel.deleteRow(from: serie.id)
+                            viewModel.deleteFavorite(from: serie)
+                            favorites.remove(serie)
                         } label: {
                             Image(systemName: "trash")
                         }
@@ -24,7 +27,7 @@ struct FavoritesView: View {
             }
         }
         .onAppear {
-            viewModel.fetchFavorites()
+            favorites = data.load()
         }
     }
 }

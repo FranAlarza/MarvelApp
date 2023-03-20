@@ -17,7 +17,7 @@ struct DataSeries: Codable {
 }
 
 // MARK: - Result
-struct Series: Codable, Identifiable {
+struct Series: Codable, Identifiable, Hashable {
     
     let id: Int
     let title: String
@@ -33,7 +33,7 @@ struct Series: Codable, Identifiable {
 
 
 // MARK: - Thumbnail
-struct ThumbnailSerie: Codable {
+struct ThumbnailSerie: Codable, Hashable {
     let path: String
     let thumbnailExtension: String
 

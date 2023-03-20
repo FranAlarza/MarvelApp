@@ -11,14 +11,18 @@ import XCTest
 
 final class SeriesViewModelTests: XCTestCase {
     
-    var sut: SeriesViewModel?
+    var sut: SeriesViewModel!
+    var provider: SeriesProvider!
 
     override func setUpWithError() throws {
         sut = SeriesViewModel()
+        provider = SeriesProvider()
     }
 
     override func tearDownWithError() throws {
         sut = nil
+        provider = nil
+        UserDefaultsHelper().delete()
     }
 
     func testGetSeries() throws {
@@ -46,6 +50,49 @@ final class SeriesViewModelTests: XCTestCase {
         sut?.getSeries(id: "1")
         
         self.waitForExpectations(timeout: 10)
+    }
+    
+    func testFetchFavoritesSuccess() {
+        // Given
+        provider.saveSerie()
+        
+        // Then
+        sut.fetchFavorites()
+        
+        // When
+        XCTAssertTrue(!sut.favorites.isEmpty)
+    }
+    
+    func testSaveFavorite() {
+        // Given
+        let fav = provider.provideFav()
+        let userDefaults = UserDefaultsHelper()
+        
+        // When
+        sut.saveFavorite(serie: fav)
+        let favorites = userDefaults.load()
+        
+        // Then
+        XCTAssertTrue(!favorites.isEmpty)
+    }
+    
+    func testDeleteFavorite() {
+        // Given
+        let fav = provider.provideFav()
+        let userDefaults = UserDefaultsHelper()
+        
+        // When
+        sut.saveFavorite(serie: fav)
+        let favorites = userDefaults.load()
+        
+        // Then
+        XCTAssertTrue(!favorites.isEmpty)
+        
+        // When
+        sut.deleteFavorite(from: fav)
+        
+        // Then
+        XCTAssertTrue(sut.favorites.isEmpty)
     }
 
 }

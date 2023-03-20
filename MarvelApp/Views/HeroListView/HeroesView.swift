@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeroesView: View {
+    @StateObject var serieVM = SeriesViewModel()
     @StateObject var viewModel = HeroesViewModel()
     var body: some View {
         TabView {
@@ -30,6 +31,7 @@ struct HeroesView: View {
             }
             
             FavoritesView()
+                .environmentObject(serieVM)
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
                 }

@@ -7,24 +7,26 @@
 
 import Foundation
 
-class UserDefaultsHelper{
+final class UserDefaultsHelper{
+    private let FAV_KEY = "FAV_KEY"
     
-    func save(series: [Series], key: String = "FAV_KEY") {
+    func save(series: Set<Series>) {
         if let encoded = try? JSONEncoder().encode(series) {
-            UserDefaults.standard.set(encoded, forKey: key)
+            UserDefaults.standard.set(encoded, forKey: FAV_KEY)
         }
     }
     
-    func load(key: String = "FAV_KEY") -> [Series] {
-        if let data = UserDefaults.standard.object(forKey: key) as? Data,
-          let series = try? JSONDecoder().decode([Series].self, from: data) {
-            return series
+    func load() -> Set<Series> {
+        if let savedSeries = UserDefaults.standard.object(forKey: FAV_KEY) as? Data {
+            if let loadedSeries = try? JSONDecoder().decode(Set<Series>.self, from: savedSeries) {
+                return loadedSeries
+            }
         }
-        return [Series]()
+        return Set<Series>()
     }
     
-    func delete(key: String = "FAV_KEY") {
-        UserDefaults.standard.removeObject(forKey: key)
+    func delete() {
+        UserDefaults.standard.removeObject(forKey: FAV_KEY)
     }
     
     

@@ -23,10 +23,12 @@ final class HeroesViewModelTest: XCTestCase {
     }
 
     func testGetHeroes() throws {
+        // Given
         var suscriptor = Set<AnyCancellable>()
         
         let expectation = self.expectation(description: "Descarga la foto")
 
+        // When
         sut?.heroes.publisher
             .sink { completion in
                 //Finaliza
@@ -44,6 +46,7 @@ final class HeroesViewModelTest: XCTestCase {
             }
             .store(in: &suscriptor)
         
+        //Then
         sut?.getHeroes()
         
         self.waitForExpectations(timeout: 10)

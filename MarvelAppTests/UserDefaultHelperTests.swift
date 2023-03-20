@@ -23,11 +23,11 @@ final class UserDefaultHelperTests: XCTestCase {
     func testSaveHeroesSuccess() throws {
         //Given
         let key = "test"
-        let series: [Series] = [Series(id: 1, title: "Spiderman", resultDescription: "", thumbnail: ThumbnailSerie(path: "", thumbnailExtension: ""))]
+        let series: Set<Series> = [Series(id: 1, title: "Spiderman", resultDescription: "", thumbnail: ThumbnailSerie(path: "", thumbnailExtension: ""))]
         
         //When
-        sut?.save(series: series, key: key)
-        let result = sut?.load(key: key)
+        sut?.save(series: series)
+        let result = sut?.load()
         
         //Then
         XCTAssertTrue(result?.count == 1)
@@ -39,8 +39,8 @@ final class UserDefaultHelperTests: XCTestCase {
         
         
         //When
-        sut?.delete(key: key)
-        let result = sut?.load(key: key)
+        sut?.delete()
+        let result = sut?.load()
         
         //Then
         XCTAssertTrue(result?.count == 0)
